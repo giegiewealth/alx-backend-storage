@@ -1,16 +1,12 @@
 #!/usr/bin/env python3
-"""
-Change school topics
-"""
+'''Task 10's module.
+'''
 
 
 def update_topics(mongo_collection, name, topics):
-    """
-    changes all topics of a school
-     document based on the name
-    :param mongo_collection:
-    :param name:
-    :param topics:
-    :return:
-    """
-    mongo_collection.update_many({"name": name}, {"$set": {"topics": topics}})
+    '''Changes all topics of a collection's document based on the name.
+    '''
+    mongo_collection.update_many(
+        {'name': name},
+        {'$set': {'topics': topics}}
+    )
